@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>User Login</title>
+  <title>Admin Login</title>
   <style>
     * {
       box-sizing: border-box;
@@ -106,7 +106,7 @@
 </head>
 <body>
   <div class="login-container">
-    <h2>Login to Your Account</h2>
+    <h2>Admin Login</h2>
     <form id="loginForm">
       <label for="loginEmail">Email Address</label>
       <input type="email" id="loginEmail" required />
@@ -137,9 +137,10 @@
         return;
       }
 
+      // On successful login, store the logged-in user in localStorage
       localStorage.setItem('loggedInUser', JSON.stringify(user));
       alert('Login successful!');
-      window.location.href = 'request.html';
+      window.location.href = 'request.html'; // Redirect to admin dashboard (or your desired page)
     });
   </script>
 </body>
